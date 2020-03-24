@@ -28,9 +28,9 @@ timestamper:1.10
 
 # using FAS for auth
 matrix-project:1.14
-matrix-auth:2.4.2
-openid:2.3
+matrix-auth:2.5
+openid:2.4
 
 # we need a custom version of this for now but init doesn't complete without a version installed
-jms-messaging:1.1.12
+jms-messaging:1.1.15
 
