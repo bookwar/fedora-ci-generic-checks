@@ -52,6 +52,7 @@ timestamps {
     def stepName = null
 
     node('master') {
+        buildCheckUtils.ciPipeline {
             try {
                 stepName = 'extract information'
                 stage(stepName) {
@@ -105,6 +106,7 @@ timestamps {
             } catch (e) {
                 currentBuild.result = 'FAILURE'
                 throw e
+            }
         }
     }
 }
