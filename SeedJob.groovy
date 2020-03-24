@@ -6,9 +6,11 @@ pipelineJob('fedora-messaging-trigger'){
                 providerDataEnvelope {
                     providerData {
                 rabbitMQSubscriber{
-                    name("FedoraMessaging")
+                    //name("FedoraMessaging")
+                    name("FedoraMessagingStage")
                     overrides {
-                        topic("org.fedoraproject.prod.buildsys.build.state.change")
+                        //topic("org.fedoraproject.prod.buildsys.build.state.change")
+                        topic("org.fedoraproject.stg.buildsys.build.state.change")
                     }
                     checks {
                         msgCheck {
