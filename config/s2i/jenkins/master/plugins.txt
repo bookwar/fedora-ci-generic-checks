@@ -34,3 +34,5 @@ openid:2.4
 # we need a custom version of this for now but init doesn't complete without a version installed
 jms-messaging:1.1.15
 
+# keep changed config.xml in case stuff breaks in the future
+jobConfigHistory:2.25
