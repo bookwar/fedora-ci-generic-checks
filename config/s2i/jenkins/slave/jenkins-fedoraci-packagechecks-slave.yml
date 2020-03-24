@@ -21,7 +21,7 @@ objects:
 - apiVersion: v1
   kind: BuildConfig
   metadata:
-    name: jenkins-fedoraci-slave
+    name: jenkins-fedoraci-packagechecks-slave
   spec:
     output:
       to:
