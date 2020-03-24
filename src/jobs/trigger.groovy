@@ -51,7 +51,6 @@ timestamps {
     def TRIGGER_RETRY_COUNT = 3
     def stepName = null
 
-    node('master') {
             try {
                 stepName = 'extract information'
                 stage(stepName) {
@@ -106,6 +105,5 @@ timestamps {
                 currentBuild.result = 'FAILURE'
                 throw e
         }
-    }
 }
 
