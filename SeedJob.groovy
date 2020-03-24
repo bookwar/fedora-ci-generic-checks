@@ -59,7 +59,7 @@ pipelineJob('fedora-rpminspect'){
         stringParam('CI_MESSAGE', CANNED_CI_MESSAGE, 'fedora-fedmsg')
         // This is for apps.ci.centos.org
         stringParam('DOCKER_REPO_URL', '172.30.254.79:5000', 'Docker Repo URL')
-        stringParam('OPENSHIFT_NAMESPACE', 'fedora-package-checks', 'OpenShift Namespace')
+        stringParam('OPENSHIFT_NAMESPACE', 'fedora-package-checks-stage', 'OpenShift Namespace')
         stringParam('OPENSHIFT_SERVICE_ACCOUNT', 'fedora-check-jenkins', 'OpenShift Service Account')
         stringParam('SLAVE_TAG', 'latest', 'tag for slave image')
         stringParam('FEDORACI_RUNNER_TAG', 'latest', 'tag for worker image')
