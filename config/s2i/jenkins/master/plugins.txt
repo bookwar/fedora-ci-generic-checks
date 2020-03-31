@@ -36,3 +36,6 @@ jms-messaging:1.1.15
 
 # keep changed config.xml in case stuff breaks in the future
 jobConfigHistory:2.25
+
+# publish metrics in prometheus format
+prometheus:2.0.6
