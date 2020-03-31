@@ -57,6 +57,7 @@ pipelineJob('fedora-rpminspect'){
 
     parameters{
         stringParam('CI_MESSAGE', CANNED_CI_MESSAGE, 'fedora-fedmsg')
+        stringParam('PROVIDED_KOJI_TASKID', '', 'Koji taskid to rerun')
         // This is for apps.ci.centos.org
         stringParam('DOCKER_REPO_URL', '172.30.254.79:5000', 'Docker Repo URL')
         stringParam('OPENSHIFT_NAMESPACE', 'fedora-package-checks-staging', 'OpenShift Namespace')
