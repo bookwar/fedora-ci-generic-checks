@@ -19,7 +19,7 @@ timestamps {
     // we don't work with scratch builds for now
     env.isScratch = false
 
-    properties(
+/*    properties(
             [
                     buildDiscarder(logRotator(artifactDaysToKeepStr: '240', daysToKeepStr: '240')),
                     parameters(
@@ -46,7 +46,7 @@ timestamps {
                             ]]
                     )
             ]
-    )
+    )*/
 
     def TRIGGER_RETRY_COUNT = 3
     def stepName = null
