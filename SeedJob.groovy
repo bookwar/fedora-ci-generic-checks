@@ -6,11 +6,11 @@ pipelineJob('fedora-messaging-trigger'){
                 providerDataEnvelope {
                     providerData {
                 rabbitMQSubscriber{
-                    //name("FedoraMessaging")
-                    name("FedoraMessagingStage")
+                    name("FedoraMessaging")
+                    //name("FedoraMessagingStage")
                     overrides {
-                        //topic("org.fedoraproject.prod.buildsys.build.state.change")
-                        topic("org.fedoraproject.stg.buildsys.build.state.change")
+                        topic("org.fedoraproject.prod.buildsys.build.state.change")
+                        //topic("org.fedoraproject.stg.buildsys.build.state.change")
                     }
                     checks {
                         msgCheck {
@@ -60,7 +60,8 @@ pipelineJob('fedora-rpminspect'){
         stringParam('PROVIDED_KOJI_TASKID', '', 'Koji taskid to rerun')
         // This is for apps.ci.centos.org
         stringParam('DOCKER_REPO_URL', '172.30.254.79:5000', 'Docker Repo URL')
-        stringParam('OPENSHIFT_NAMESPACE', 'fedora-package-checks-staging', 'OpenShift Namespace')
+        //stringParam('OPENSHIFT_NAMESPACE', 'fedora-package-checks-staging', 'OpenShift Namespace')
+        stringParam('OPENSHIFT_NAMESPACE', 'fedora-package-checks', 'OpenShift Namespace')
         stringParam('OPENSHIFT_SERVICE_ACCOUNT', 'fedora-check-jenkins', 'OpenShift Service Account')
         stringParam('SLAVE_TAG', 'latest', 'tag for slave image')
         stringParam('FEDORACI_RUNNER_TAG', 'latest', 'tag for worker image')
