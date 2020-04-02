@@ -668,8 +668,7 @@ def parseKojiMessage(Map parameters = [:]) {
 
     def utils = new Utils()
 
-    def oldparsedMsg = readJSON text: message.replace("\n", "\\n")
-    def parsedMsg = oldparsedMsg.get('msg', '{}')
+    def parsedMsg = readJSON text: message.replace("\n", "\\n")
     //print "parsedMsg: " + parsedMsg
 
     try {
