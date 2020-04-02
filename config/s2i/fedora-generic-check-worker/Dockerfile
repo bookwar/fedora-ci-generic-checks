@@ -16,7 +16,7 @@ LABEL io.k8s.description="Fedora generic-check-worker" \
 RUN dnf -y install dnf-plugins-core
 
 # enable the rpminspect copr
-RUN dnf -y copr enable dcantrel/rpminspect
+RUN dnf -y copr enable dcantrell/rpminspect
 
 # Install all package requirements
 RUN dnf -y install ansible \
