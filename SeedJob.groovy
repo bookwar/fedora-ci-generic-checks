@@ -1,6 +1,6 @@
 pipelineJob('fedora-messaging-trigger'){
     def CANNED_CI_MESSAGE = '{"deliveryTag":584,"msg":{"attribute":"state","build_id":1430989,"epoch":null,"instance":"primary","name":"file-roller","new":1,"old":0,"owner":"kalev","release":"1.fc32","request":["git+https://src.fedoraproject.org/rpms/file-roller.git#e00aa0590662351c540d0a2782382ee45fa6bba5","f32-build-side-18035",{"skip_tag":true}],"task_id":40809920,"version":"3.35.1"},"msg_id":"6b5854b1-550e-4bf7-b145-fa6c406903e1","timestamp":1579599505254,"topic":"org.fedoraproject.prod.buildsys.build.state.change"}'
-/*    triggers{
+    triggers{
         ciBuildTrigger{
             noSquash(true)
             providers {
@@ -32,7 +32,7 @@ pipelineJob('fedora-messaging-trigger'){
             }
         }
     }
-*/
+
     throttleConcurrentBuilds {
         maxPerNode(1)
         maxTotal(1)
@@ -66,7 +66,7 @@ pipelineJob('fedora-rpminspect'){
 
     throttleConcurrentBuilds {
         maxPerNode(1)
-        maxTotal(10)
+        maxTotal(5)
     }
 
     parameters{
@@ -79,7 +79,7 @@ pipelineJob('fedora-rpminspect'){
         stringParam('OPENSHIFT_SERVICE_ACCOUNT', 'fedora-check-jenkins', 'OpenShift Service Account')
         stringParam('SLAVE_TAG', 'latest', 'tag for slave image')
         stringParam('FEDORACI_RUNNER_TAG', 'latest', 'tag for worker image')
-        stringParam('RUNNING_ENVIRONMENT', 'stage', 'Which environment are we running in')
+        stringParam('RUNNING_ENVIRONMENT', 'prod', 'Which environment are we running in')
     }
 
     definition {
