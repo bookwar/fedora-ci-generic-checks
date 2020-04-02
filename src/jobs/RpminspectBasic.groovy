@@ -160,7 +160,7 @@ timestamps {
 
                                 // parse target envr into env var
                                 def json_message = readJSON text: env.CI_MESSAGE
-                                env.TARGET_ENVR = "${json_message['msg']['name']}-${json_message['msg']['version']}-${json_message['msg']['release']}"
+                                env.TARGET_ENVR = "${json_message['name']}-${json_message['msg']['version']}-${json_message['msg']['release']}"
 
                                 // for rpminspect, 0 and 1 are OK exist codes for rpminspect
                                 // 0 indicates pass
