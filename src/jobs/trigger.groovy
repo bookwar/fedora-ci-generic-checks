@@ -19,35 +19,6 @@ timestamps {
     // we don't work with scratch builds for now
     env.isScratch = false
 
-/*    properties(
-            [
-                    buildDiscarder(logRotator(artifactDaysToKeepStr: '240', daysToKeepStr: '240')),
-                    parameters(
-                            [
-                                    string(description: 'FedoraMessaging', defaultValue: CANNED_CI_MESSAGE, name: 'CI_MESSAGE')
-                            ]
-                    ),
-                    pipelineTriggers(
-                            [[$class: 'CIBuildTrigger',
-                              noSquash: true,
-                              providerData: [
-                                  $class: 'RabbitMQSubscriberProviderData',
-                                  name: 'FedoraMessaging',
-                                  overrides: [
-                                      topic: 'org.fedoraproject.prod.buildsys.build.state.change'
-                                  ],
-                                  checks: [
-                                      [field: 'new', expectedValue: '1|CLOSED'],
-                                      [field: 'release', expectedValue: '.*fc.*'],
-                                      [field: 'instance', expectedValue: 'primary'],
-                                      [field: 'owner', expectedValue: '^(?!koschei).*']
-                                  ]
-                              ]
-                            ]]
-                    )
-            ]
-    )*/
-
     def TRIGGER_RETRY_COUNT = 3
     def stepName = null
 
