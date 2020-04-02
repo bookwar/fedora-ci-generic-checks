@@ -39,3 +39,6 @@ jobConfigHistory:2.25
 
 # publish metrics in prometheus format
 prometheus:2.0.6
+
+# throttle builds in hopes of not overwhelming the master
+throttle-concurrents:2.0.2
