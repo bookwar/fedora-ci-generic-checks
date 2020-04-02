@@ -1,5 +1,5 @@
 pipelineJob('fedora-messaging-trigger'){
-    triggers{
+/*    triggers{
         ciBuildTrigger{
             noSquash(true)
             providers {
@@ -31,6 +31,12 @@ pipelineJob('fedora-messaging-trigger'){
             }
         }
     }
+*/
+    throttleConcurrentBuilds {
+        maxPerNode(1)
+        maxTotal(1)
+    }
+
     definition {
         cps {
             script(readFileFromWorkspace("src/jobs/trigger.groovy"))
@@ -53,7 +59,10 @@ pipelineJob('fedora-rpminspect'){
     // by datagrepper
     fedmsgRetryCount = 120
 
-
+    throttleConcurrentBuilds {
+        maxPerNode(1)
+        maxTotal(10)
+    }
 
     parameters{
         stringParam('CI_MESSAGE', CANNED_CI_MESSAGE, 'fedora-fedmsg')
