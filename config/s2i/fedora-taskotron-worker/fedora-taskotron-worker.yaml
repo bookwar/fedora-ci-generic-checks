@@ -5,7 +5,7 @@ labels:
 metadata:
   annotations:
     description: Fedora taskotron-worker container
-  name: fedora-taskotron-builder
+  name: fedora-taskotron-worker
 objects:
 - apiVersion: v1
   kind: ImageStream
