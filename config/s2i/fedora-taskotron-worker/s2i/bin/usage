@@ -1,0 +1,8 @@
+#!/bin/bash -e
+cat <<EOF
+This is the fedora:latest taskotron-worker image.
+See https://github.com/tflink/fedora-ci-generic-checks for more information.
+
+Sample invocation:
+s2i build test/test-app taskotron-worker taskotron-worker-app
+EOF
